@@ -38,6 +38,7 @@ export const scss = () => {
 		)
 
 		// сжатие и переименовывание файла css
+		
 		// .pipe(
 		// 	app.plugins.gulpIf(
 		// 		app.isBuild,
@@ -47,6 +48,7 @@ export const scss = () => {
 		// .pipe(rename({
 		// 	extname: '.min.css'
 		// }))
+		
 		// конец сжатия
 
 		.pipe(rename({
