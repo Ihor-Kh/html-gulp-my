@@ -11,12 +11,12 @@ export const html = () => {
 		))
 		.pipe(fileInclude())
 		.pipe(app.plugins.replace(/src\/img\//g, './img/'))
-		// .pipe(
-		// 	app.plugins.gulpIf(
-		// 		app.isBuild,
-		// 		webpHtmlNoSvg()
-		// 	)
-		// )
+		.pipe(
+			app.plugins.gulpIf(
+				app.isBuild,
+				webpHtmlNoSvg()
+			)
+		)
 		.pipe(app.gulp.dest(app.path.build.html))
 		.pipe(app.plugins.browserSync.stream())
 }
